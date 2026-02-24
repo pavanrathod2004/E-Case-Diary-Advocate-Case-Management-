@@ -53,8 +53,7 @@ It follows the MVC architecture and uses JDBC for database connectivity.
 4. Import the project into IntelliJ IDEA.
 5. Configure Tomcat Server in IntelliJ.
 6. Run the project on the server.
-7. Access the project in your browser:
-   http://localhost:8080/project-name
+  
 
 ---
 
