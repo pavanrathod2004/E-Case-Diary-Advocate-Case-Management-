@@ -1,0 +1,177 @@
+/* Page background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 0;
+}
+
+/* Main form container - compact */
+.addcase {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    width: 450px;
+    min-height: 550px;       /* fixed minimum height */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+    box-sizing: border-box;
+    position: relative;      /* msg absolute position साठी */
+}
+
+/* Form title */
+.addcase h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* Inputs & Textarea */
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Focus effect */
+input:focus,
+textarea:focus {
+    border: 2px solid #3498db;
+    background-color: #f9f9f9;
+}
+
+/* Rows for two inputs side by side */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-row > div {
+    flex: 1;
+}
+
+.form-row > div:first-child {
+    margin-right: 5px;
+}
+
+.form-row > div:last-child {
+    margin-left: 5px;
+}
+
+/* Buttons common */
+.btn,
+.back-btn {
+    border: none;
+    padding: 9px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+/* Submit button */
+.btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #27ae60;
+    transform: scale(1.03);
+}
+
+/* Back button */
+.back-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.back-btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.03);
+}
+
+/* Message text - form च्या खाली proper */
+.addcase .msg {
+    position: absolute;      /* fixed position within form */
+    bottom: 15px;            /* button group च्या खाली */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #f1c40f;
+    font-size: 13px;
+    overflow: hidden;        /* जास्त msg truncate */
+    white-space: nowrap;     /* single line */
+    text-overflow: ellipsis; /* long msg ... */
+}
+
+/* Button group */
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.btn-group .btn,
+.btn-group .back-btn {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.btn-group .btn:first-child {
+    margin-left: 0;
+}
+.btn-group .back-btn:last-child {
+    margin-right: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 350px) {
+    .btn-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .btn-group .btn,
+    .btn-group .back-btn {
+        flex: unset;
+        width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row > div:first-child,
+    .form-row > div:last-child {
+        margin: 0;
+    }
+}
+
